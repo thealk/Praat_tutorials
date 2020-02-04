@@ -1,12 +1,19 @@
 # Praat_tutorials
- Tutorials for learning to use and script in Praat
+Contains Thea's tutorials for learning to use and script in Praat
+
+**CAUTION:** I'm currently in the process of updating these. Things may break. Not recommended for general use yet!
+
+## TODO: 
+- Better description of tutorials
+- Update readme to ensure consistency/clarity
+- Update Praat syntax if necessary
+----
 
 # PRAAT SCRIPTING
 
-
-Useful for carrying out several iterations of measurements and analyses that must be done in Praat.
-Saves a LOT of time (once you get the basics down)
-More consistent measurements
+- Useful for carrying out several iterations of measurements and analyses that must be done in Praat.
+- Saves a LOT of time (once you get the basics down)
+- More consistent measurements
 
 Tell Praat where you want it to do something by using TextGrid boundaries that line up to relevant time points in your sound file. 
 
