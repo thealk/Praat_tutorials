@@ -31,26 +31,32 @@ Praat scripts can be used for several steps during the above process to facilita
 Voiceless sibilant final words of interest in a carrier phrase: "Move the hanger above the fridge, now move the *niece* above the hat.
 
 ### TextGrid format: 
-	Force-aligned phones (pseudo-IPA transcription)
-	Force-aligned words
-	Sibilant of interest (1=/s/, 2=/sh/) 
+
+- `Tier 1`: Force-aligned phones (pseudo-IPA transcription)
+- `Tier 2`: Force-aligned words
+- `Tier 3`: Sibilant of interest (1=/s/, 2=/sh/) 
 
 ## What we'll do to data:
-Count the number of participants (you don't *need* Praat for this, but it's convenient)
-Duplicate our SOI tier and make systematic adjustments to the sibilant boundaries
-Extract acoustic measurements on the sibilant and save the values to an output file
 
 ### Iterate over files and print out information
 `1_countNumberOfParticipants.praat`
 
+- Count the number of participants by iterating over files with a specific name structure in a folder (you don't *need* Praat for this, but it's convenient) 
+
 ### Modify TextGrids and save files
 `2_duplicateTier.praat`
+
+- Save new TextGrids with a copied version of the SOI tier
 
 ### Modify intervals on a TextGrid and save files
 `3_adjustBoundaries.praat`
 
+- Using the new tier we made, we will make systematic adjustments to the SOI boundaries
+
 ### Take spectral measurements of all intervals on a given tier
 `4_fricativeAnalysis.praat`
+
+- Extract acoustic measurements on the sibilant and save the values to an output file in the form of a .csv
 
 ## Pros and Cons of Praat Scripting
 ### Pros
@@ -60,7 +66,10 @@ Extract acoustic measurements on the sibilant and save the values to an output f
 - You can also use Praat scripts to do non-Praat things like rename files, list files in a folder, etc etc. These are all things that can also usually be done from the command line as well.
 - There is tons of information online about Praat scripting! The online Praat manual is very helpful (and frequently updated), and the Praat creators frequently post responses to questions on their yahoo forum.
  - [Praat scripting manual](http://www.fon.hum.uva.nl/praat/manual/Scripting.html)
+ - [Phonetics on speed Praat Scripting tutorial by Jörg Mayer](http://praatscripting.lingphon.net/)
+ - [Using Praat for linguistic research by Will Styler](http://wstyler.ucsd.edu/praat/)
  - [Praat user group](https://groups.io/g/Praat-Users-List)
+ 
 
 #### Cons
 - Praat is not the most logical scripting language. It's finicky with how variables are named/called, and frequent version updates make certain lines of code obsolete (e.g. you might find an old script that used to run perfectly doesn't work on your new version of Praat, and it might be related to something as simple as a single quote that the new version no longer recognizes in that position… 
