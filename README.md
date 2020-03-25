@@ -300,10 +300,12 @@ Line 54 not performed or completed
 **If there's time…. write a script (or two…)! Below are some examples.**
 
 1. getWavDuration.praat:
+
 	•	Reads in every wav file in a directory
 	•	Gets the total duration of the wav file
 	•	Prints it out a two column text file with the filename and duration for each file
 2. changeTierName.praat:
+
 	•	Prompts the user to enter a tier they'd like to rename
 	•	Reads in ever TextGrid in a directory
 	•	Renames the specified tier
